@@ -6,7 +6,7 @@ import PackageDescription
 let realmVersion = "10.26.0"
 
 func buildTargets() -> [Target] {
-    let baseURL = "https://github.com/bioche/RealmBinaries/releases/download/\(realmVersion)"
+    let baseURL = "https://github.com/timstudt/RealmBinaries/releases/download/\(realmVersion)"
     
 #if swift(>=5.6.0)
     let xcodeVersion = "13_4"

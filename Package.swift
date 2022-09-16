@@ -10,12 +10,12 @@ func buildTargets() -> [Target] {
     
 #if swift(>=5.7.0)
     let xcodeVersion = "14_0"
-    let realmChecksum = "2bdabb1458a0672103e62a396f34e92a02272ea6150e062d96f57d4603c607d0"
-    let realmSwiftChecksum = "a21575c1dc49ea72cc4d677006599761370c3d22bb35a41c4c957017c6ccf481"
+    let realmChecksum = "e41b992812da0f22fe52d813fa235c21cc39e9d028b98b24fb234035f0a31b8e"
+    let realmSwiftChecksum = "81fe3250331c10300a56c27803fe71c7545b982953a764ffa393160954948c20"
 #else
     let xcodeVersion = "13_4_1"
-    let realmChecksum = "6e9d67b3731ef619e38634df70e9ca2ab207a9235bcfed2add7c497bc90fc8c6"
-    let realmSwiftChecksum = "2e787d57bc25e3954cfab145076c7ad7a60a02608db6802661772b06318d94f9"
+    let realmChecksum = "b343d3bc78d0270ee5f615ab3ae6cdde1f835e216f38c68885dd78ddeb1e76e4"
+    let realmSwiftChecksum = "77fc7f8c459240b3b777feb75cee0bec33db7e504d6f2caa69918a1bc2233a86"
 #endif
     
     return [
@@ -34,7 +34,12 @@ func buildTargets() -> [Target] {
 
 let package = Package(
     name: "RealmBinaries",
-    platforms: [.iOS("13.4")],
+    platforms: [
+        .macOS(.v10_10),
+        .iOS(.v11),
+        .tvOS(.v9),
+        .watchOS(.v2)
+    ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(

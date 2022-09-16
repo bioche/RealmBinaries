@@ -1,2 +1,5 @@
 /.swiftpm/xcode/package.xcworkspace/xcuserdata/bioche.xcuserdatad/UserInterfaceState.xcuserstate
 /.swiftpm/xcode/xcuserdata/bioche.xcuserdatad/xcschemes/xcschememanagement.plist
+/.swiftpm/xcode/xcuserdata
+/.swiftpm/xcode/package.xcworkspace/xcuserdata
+/.DS_Store

@@ -3,15 +3,15 @@
 
 import PackageDescription
 
-let realmVersion = "10.30.0-beta1"
+let realmVersion = "10.30.0-beta2"
 
 func buildTargets() -> [Target] {
     let baseURL = "https://github.com/bioche/RealmBinaries/releases/download/\(realmVersion)"
     
 #if swift(>=5.7.1)
     let xcodeVersion = "14_1"
-    let realmChecksum = "95b1e8f19eff36a9684308443c030887efb5e31e8584577ed9ed28e162940d76"
-    let realmSwiftChecksum = "05aa860f4fa3f2bd4c109dca9095f8f77eda3603ce8fa26081778efadb889bd7"
+    let realmChecksum = "91663b8e0658a5d5af353d1c6fdc37f37d540d4ebbc0f36f947368809801a000"
+    let realmSwiftChecksum = "d441071be1f716ceb8c1551bb18d6534e36bdc39cf122482bea607f2c84a578a"
 #elseif swift(>=5.7.0)
     let xcodeVersion = "14_0"
     let realmChecksum = "e41b992812da0f22fe52d813fa235c21cc39e9d028b98b24fb234035f0a31b8e"

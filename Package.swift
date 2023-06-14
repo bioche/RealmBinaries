@@ -3,21 +3,25 @@
 
 import PackageDescription
 
-let realmVersion = "10.38.0"
+let realmVersion = "10.40.2"
 
 func buildTargets() -> [Target] {
     let baseURL = "https://github.com/bioche/RealmBinaries/releases/download/\(realmVersion)"
     
-#if swift(>=5.8.0)
-    let xcodeVersion = "14_3"
-    let realmChecksum = "b2fdbe49d326175af87be488f31533f6c2cb86a0b5c351264935133db2748ff6"
-    let realmSwiftChecksum = "c3822a8f6743a0eef4fb4dd73dbc0f41f79bca655478deb06cd78676e8223264"
-#else
-    let xcodeVersion = "14_2"
-    let realmChecksum = "befa150f03157fac25dd87e50a37618e3d006a9005e4a99b3a34f9237aa806de"
-    let realmSwiftChecksum = "b16d19c62961ef15b8012b6155cd43ca43290dad8f7437950a07ff3645232d0c"
-#endif
+//#if swift(>=5.7.2)
+//    let xcodeVersion = "14_2"
+//    let realmChecksum = "ce04b1536fea18d72d5a3bc1c6ea5838aae48bb74717f7b3c6b54fa0d332c182"
+//    let realmSwiftChecksum = "df5b0925a02a785b14685413b3cfb61336aefa92f396a8bc8622254a0b7579f8"
+//#else
+//    let xcodeVersion = "13_4_1"
+//    let realmChecksum = "d4c2c4f1ca23b6f8699bcc2f771acf75da8ec0c2c1f3851df68d7f37fbb6142f"
+//    let realmSwiftChecksum = "986bc9988dbef675955701d58487363edae92e59ede9a69fc76fa6c5d90401d1"
+//#endif
     
+    let xcodeVersion = "14_3_1"
+    let realmChecksum = "09826ae8d69c08c4338d07354c41b93fbe2c50458bd7003fac8aeafded38a31d"
+    let realmSwiftChecksum = "48328f65b8c1925aab1d8d11dc6b9e0aa30fde3afa468cf6639d3974b56ff11f"
+
     return [
         .binaryTarget(
             name: "Realm",
@@ -35,10 +39,10 @@ func buildTargets() -> [Target] {
 let package = Package(
     name: "RealmBinaries",
     platforms: [
-        .macOS(.v10_10),
+        .macOS(.v10_13),
         .iOS(.v11),
-        .tvOS(.v9),
-        .watchOS(.v2)
+        .tvOS(.v11),
+        .watchOS(.v4)
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
